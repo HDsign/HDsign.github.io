@@ -1,0 +1,590 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 
+    fonts = oswald, poppins
+*/
+img {
+    width: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* border: 2px solid green; */
+    font-family: 'Poppins', sans-serif;
+    height: 2000px;
+    width: 100vw;
+    overflow-x: hidden;
+    font-size: 16px;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h2 {
+    text-align: center;
+    font-size: calc(2.5vw + 1em);
+    margin-bottom: 1.3em;
+    color: white;
+    padding-top: 1em;
+}
+
+h3 {
+    font-size: calc(1vw + .3em);
+    letter-spacing: .1em;
+}
+
+nav {
+    /* border-bottom: 3px solid pink; */
+    position: fixed;
+    height: 70px;
+    /* background-color: #1e1f21; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    left: 0;
+    right: 0;
+    color: white;
+    font-size: 1.1rem;
+    /* font-weight: bolder; */
+    letter-spacing: .1em;
+    z-index: 9;
+}
+
+nav .span1 {
+    transform-origin: 0 0;
+    transform: rotate(45deg) translate(4px, -1px);
+}
+
+nav .hide {
+    opacity: 0;
+    transform: scale(0);
+}
+
+nav .span3 {
+    transform-origin: 0 100%;
+    transform: rotate(-45deg) translate(3px, 1px);
+}
+
+.active_nav {
+    background-color: #222;
+}
+
+nav .main img {
+    height: 80px;
+}
+
+nav ul {
+    width: 50vw;
+    display: flex;
+}
+
+nav .menu-toggle {
+    display: none;
+}
+
+nav ul li {
+    text-align: center;
+    flex: 1;
+    list-style-type: none;
+    transition: all .5s;
+    height: 70px;
+    line-height: 70px;
+    padding: 0 1em;
+}
+
+nav ul li:hover {
+    /* transform: scale(1.1); */
+    background-color: rgb(44, 44, 44);
+}
+
+nav ul li:last-child {
+    display: none;
+}
+
+nav ul li a {
+    color: white;
+}
+
+/* jumbotron start */
+.jumbotron {
+    /* background-image: url("img/Jumbotron.png"); */
+    /* border: 4px solid pink; */
+    height: calc(100vmin - 55px);
+    /* background-color: rgb(135, 21, 40); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 50px;
+    width: 100vw;
+    /* position: relative; */
+}
+
+.jumbotron img {
+    margin-top: -50px;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    background-size: cover;
+    height: calc(100vmin + 50px);
+}
+
+.jumbotron h1 {
+    font-size: calc(4vw + 1em);
+    display: inline-block;
+    letter-spacing: .02em;
+}
+
+.jumbotron h1.purple{
+    color: #cb24fb;
+    /* font-size: calc(5vw + 2em); */
+}
+
+
+.jumbotron h1.white {
+    color: white;
+}
+
+.jumbotron h1.right {
+    color: white;
+    margin-left: .2em;
+    position: relative;
+}
+
+/* test welcome */
+.jumbotron h1 span {
+    color: white;
+    font-size: calc(5vw + .4em);
+}
+
+.jumbotron h1 span.purple {
+    color: #cb24fb;
+}
+
+.jumbotron .below {
+    position: relative;
+}
+
+.jumbotron p {
+    position: absolute;
+    top: 2em;
+    width: 10em;
+    color: white;
+    font-weight: none;
+    letter-spacing: .2em;
+    left: -10em;
+    font-size: calc(1.5vw + .2em);
+    z-index: -1;
+}
+/* jumbotron end */
+
+/* about start */
+.about {
+    padding: calc(2*(2.5vw + 1em)) 0;
+    margin-top: 3px;
+    height: calc(60vmin - .7vmin);
+    background-color: #36143b;
+    /* background-color: #5a1c64; */
+}
+
+.about .container {
+    margin: auto;
+    display: grid;
+    width: 70%;
+    grid-template-columns: 1fr 1fr;
+    gap: 3em;
+    grid-template-areas: "one two";
+}
+
+.description {
+    font-size: calc(1vw + .3em);
+    word-spacing: .1em;
+    letter-spacing: .05em;
+    /* text-align: center; */
+    line-height: 1.5em;
+}
+
+.about .container .one {
+    grid-area: one;
+}
+
+.about .container .two {
+    grid-area: two;
+}
+
+.about .container .three {
+    grid-area: three;
+}
+/* about end */
+
+/* catalogue start */
+.catalogue {
+    padding: calc(2*(2.5vw + 1em)) 0;
+    /* padding: 10em 0; */
+}
+
+.catalogue h2 {
+    color: black;
+    margin-bottom: 1.5em;
+}
+
+.catalogue .container{
+    margin: auto;
+    max-width: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: black;
+}
+
+.catalogue .card {
+    padding-top: 20px;
+    overflow-x: hidden;
+    width: 28%;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #eee;
+    margin-bottom: 4em;
+    transition: all .3s;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px #888888;
+    font-size: calc(1vw + .3em);
+}
+
+.catalogue .caption {
+    color: white;
+    padding: .5em 0;
+    width: 100%;
+    margin: 1em auto;
+    background-color: #27084c;
+}
+
+.card img {
+    height: calc(150px - 5vmin);
+    width: calc(150px - 5vmin);
+    border-radius: 50%;
+    margin: 10px 0;
+    /* border: 1px solid white; */
+}
+
+.catalogue .container .card:hover {
+    transform: scale(1.1);
+    background-color: #27084c;
+    color: white;
+}
+
+.catalogue .card:hover .caption {
+    /* background-color: #1f063b; */
+    background-color: #eee;
+    color: black;
+}
+/* catalogue end */
+
+/* faq start */
+.faq {
+    padding: calc(2*(2.5vw + 1em)) 0;
+    /* padding: 10em 0; */
+    /* height: 100vmin; */
+    color: white;
+    background-color: #27084c;
+}
+
+.faq .container {
+    width: 50%;
+    margin: auto;
+}
+
+.faq .container .explanation {
+    font-size: 0;
+    transition: all .3s;
+}
+
+.faq img {
+    width: calc(.5vw + .5em);
+    margin-top: .2em;
+    transition: .3s .3s;
+}
+
+.faq img.rotated {
+    transform: rotate(0deg);
+}
+
+.faq img.rotated {
+    transform: rotate(90deg);
+}
+
+.faq .questions {
+    background-color: #4c1a89;
+    /* box-shadow: 0px 1px 2px white; */
+    border-radius: 5px;
+    padding: .5em 1em;
+    margin-bottom: 1.5em;
+    cursor: pointer;
+}
+
+.faq .questions.active{
+    color: white;
+    background-color: #27084c;
+}
+
+.faq .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .explanation.active{
+    transform: scale(1);
+    transition: all .3s;
+    opacity: 1;
+    margin-top: .5em;
+    display: block;
+    font-size: calc(1vw + .1em);
+    letter-spacing: .1em;
+    color: #ddd;
+}
+
+/* faq end */
+
+/* contact start */
+.contact {
+    /* padding: 10em 0; */
+    padding: calc(2*(2.5vw + 1em)) 0;
+    padding-bottom: calc(4*(2.5vw + 1em));
+}
+
+.contact h2 {
+    color: black;
+}
+
+.contact .fill {
+    text-align: center;
+    /* display: flex; */
+    align-items: center;
+    /* width: 100%; */
+    flex: 1;
+    justify-content: center;
+    margin-bottom: 5vmin;
+}
+
+.contact .container {
+    color: black;
+    /* width: calc(4vw + 9*(1vw + .3em)); */
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 1px solid black; */
+}
+
+.contact span {
+    width: calc(8.8*(1vw + .3em));
+}
+
+.contact a {
+    font-size: calc(1vw + .3em);
+    letter-spacing: .05em;
+    color: #666;
+}
+
+.contact span p {
+    font-size: calc(1vw + .3em);
+    /* border: 1px solid black; */
+}
+
+.contact h2 {
+    margin-bottom: 0;
+}
+
+.contact .head {
+    margin: 2em auto;
+    margin-bottom: 5em;
+    font-size: calc(.8vw + .3em);
+    width: 50%;
+    text-align: center;
+    color: black;
+    color: #aaa;
+    letter-spacing: .1em;
+}
+
+.contact img {
+    width: 3vw;
+}
+
+.contact h3 {
+    color: #aaa;
+    margin-top: 1em;
+    margin-bottom: .5em;
+}
+
+/* contact end */
+
+/* footer */
+footer {
+    text-align: center;
+    line-height: 8vmin;
+    height: 8vmin;
+    color: white;
+    /* background-color: #27084c; */
+    background-color: #36143b;
+    font-size: calc(1vw + .3em);
+    letter-spacing: .1em;
+}
+/* footer end */
+
+/* responsive breakpoint */
+
+/* tablet */
+@media (max-width : 768px){
+    nav ul {
+        width: 60vw;
+        font-size: 1rem;
+    }
+    .catalogue .container {
+        justify-content: space-evenly;
+        width: 75%;
+    }
+
+    .catalogue .card {
+        width: 40%;
+        margin-bottom: 40px;
+    }
+
+    .about .container {
+        /* gap: 2em;
+        padding-left: 1em;
+        padding-right: 1em; */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: left;
+        width: 100%;
+    }
+
+    .about .container .description {
+        width: 35%;
+    }
+
+    .about .three {
+        margin-top: -1em;
+    }
+
+    .faq .container {
+        width: 70%;
+    }
+}
+
+/* phone */
+@media (max-width : 576px){
+    nav .menu-toggle {
+        display: flex;
+        height: 100vh;
+    }
+    
+    nav .menu-toggle {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 20px;
+        justify-content: space-between;
+    }
+    
+    nav span {
+        display: block;
+        width: 20px;
+        height: 3px;
+        background-color: white;
+        border-radius: 3px;
+        transition: .5s;
+    }
+    
+    nav ul {
+        opacity: 0;
+        z-index: -1;
+        width: 50vw;
+        right: 0;
+        background-color: rgb(30, 31, 33);
+        top: 0;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        position: absolute;
+        height: 100vh;
+        transform: translateX(100%);
+        transition: all .5s;
+        font-size: 0;
+    }
+
+    nav ul li:first-child{
+        margin-top: 5em;
+        /* background-color: pink; */
+    }
+    
+    nav ul.slide {
+        font-size: 1em;
+        opacity: 1;
+        transform: translateX(0);
+    }  
+    
+    nav ul li {
+        transition: none;
+    }
+
+    nav ul li:last-child {
+        display: inline-block;
+    }
+
+    .about {
+        height: calc(25vmin + 15em);
+        padding-left: 4em;
+        padding-right: 4em;
+    }
+
+    .about .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        /* background-color: pink; */
+        grid-template-areas: 
+        "one"
+        "two"
+        "three";
+    }
+
+    .about .container .description {
+        margin-bottom: -2em;
+        font-size: calc(1.3vw + .3em);
+        word-spacing: .2em;
+        width: 100%;
+    }
+
+    .card img {
+        width: calc(100px - 5vmin);
+        height: calc(100px - 5vmin);
+    }
+
+    .faq .questions {
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        /* border: 1px solid white; */
+    }
+
+    .contact .container {
+        width: 100%;        
+    }
+
+    .contact h3 {
+        margin-bottom: -.2em;
+    }
+}
